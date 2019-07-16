@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">#防止乱码的咒语，都放在head标签里
+        <meta content="width=device-width,initial-scale=1.0" name="viewport"> <!--让网页跟随设备自适应大小的咒语-->
+        <meta name="keywords" content="智慧，科学效应库，搜索引擎">
+        <meta name="description" content="智能的搜索引擎，专注科学效应的搜索，协助创新的有效工具"> <!--百度抓取后的网页描述-->
+        <meta name="author" content="zhonghao"> <!--备注作者-->
+        <meta http-equiv="refresh" content="2;http://baidu.com"> <!--停留两秒就跳转到其他网页-->
+        <title>搜索</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .show{
+                margin: 10px auto;
+                width: 340px;
+            }
+            #text{
+                /*去掉默认样式*/
+                appearance:none;
+                width:250px;
+                height: 20px;
+                outline:0;
+            }
+            #go{
+                display: inline-block;
+                text-decoration: none;
+                text-align: center;
+                line-height: 25px;
+                border: 0;
+                width:70px;
+                height: 25px;
+                font-size: 14px;
+                color: white;
+                background-color: rgb(33,134,250);
+            }
+            .search{
+                width:252px;
+                border:1px solid #ccc;
+                display: none;
+            }
+            ul{
+                list-style: none;
+            }
+            li{
+                line-height: 40px;
+                font-size: 20px;
+                cursor:pointer;
+                box-sizing: border-box;
+                padding:0 5px;
+            }
+            li:hover{
+                background-color: rgb(130,230,255);
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/"  method="post" >
+        <center><img src="../static/search.png" alt="搜索图标" width="64" height="64"> </center><!--../代表上一级目录-->
+        <div class="show">
+            <input name="query" id="text" placeholder="例如：如何解决投影仪的散热问题" >
+            <input type="submit" id="go" value="立刻搜索">
+            </div>    </body>

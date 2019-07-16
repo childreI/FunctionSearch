@@ -1,0 +1,19 @@
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    <tr>
+        <th>名称</th>
+        <th>内容</th>
+
+    </tr>
+        {% for i in u %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+    
+{% endblock %}
