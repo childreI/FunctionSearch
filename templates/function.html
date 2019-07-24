@@ -1,19 +1,50 @@
 
-{% block title %}首页{% endblock %}
+{% block title %}搜索结果如下{% endblock %}
 
 {% block page_content %}
-    <table class="table table-bordered">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+    table{
+        border-collapse: collapse;
+     }
+
+    thead th{
+        background: black;
+        color: white;
+        text-align: center;
+        font-size: 200%;
+        text-shadow:2px 2px green;
+     }
+    caption{
+        padding: 20px;
+
+     }
+
+</style>
+
+
+
+    <table class="table table-striped table-hover">
+        <caption>您好，下面的效应可能有用</caption>
+    <thead>
     <tr>
         <th>名称</th>
-        <th>内容</th>
-
+        <th>效应内容</th>
     </tr>
+    </thead>
+    <tbody>
         {% for i in u %}
-            <tr>
-                <td>{{ i[0] }}</td>
+            <tr class="warning">
+                <th>{{ i[0] }}</th>
                 <td>{{ i[1] }}</td>
             </tr>
     {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr class="danger">
+            <td colspan='2'> 以上内容均为网上收集，仅供参考。</td>
+        </tr>
+    </tfoot>
     </table>
-    
+
 {% endblock %}

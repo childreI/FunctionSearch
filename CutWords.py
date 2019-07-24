@@ -23,3 +23,4 @@ def text_seg(text: str, stop_words: list = None) -> list:
             seg_list.append({word.lower():flag})
     return seg_list
 
+print(text_seg('分解垃圾'))

@@ -2,24 +2,17 @@ from flask import Flask, request
 from flask import render_template
 import pymssql
 from flask_bootstrap import Bootstrap
-import jieba
+
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
-
+from old_to_new import turn
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
     querywords = request.form.get('query')
     if querywords is not None:
-
-
-
-
-
-
-
-
+        querywords = turn(querywords)
 
         conn = pymssql.connect('localhost','sa', '123', 'CreapDBsong')  # 本机地址、用户名、密码、所用数据库名称
         cur = conn.cursor()

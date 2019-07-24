@@ -1,7 +1,5 @@
 from py2neo import Graph,Node,walk,Relationship,NodeSelector
-graph=Graph("http://localhost:7474",
-    username="neo4j",
-    password="123456")
+graph=Graph("http://localhost:7474", username="neo4j", password="123456")
 
 
 # 查询node
@@ -29,7 +27,7 @@ def find_node_from_rela(graph , node_name ,relationship):
             tmp.append(n.end_node()["name"])
         for n in graph.match(end_node=node,rel_type=relationship):
             tmp.append(n.start_node()["name"])
-        return tmp
+        return tmp[-1]
     except:
         return '输入有误，查询失败'
 

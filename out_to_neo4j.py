@@ -14,7 +14,7 @@ print(len(word_data))
 
 data=pd.read_csv('./static/tongyici.csv', header=0, sep=',')
 print (len(data))
-for m in range(0,500):
+for m in range(0,len(data)):
     try:
         rel = Relationship(g.find_one(label='word', property_key='name', property_value=data['name'][m]), data['guanxi'][m], g.find_one(label='word', property_key='name', property_value=data['name2'][m]))
         g.create(rel)

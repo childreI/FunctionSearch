@@ -449,8 +449,8 @@ class CilinSimilarity(object):
 
 if __name__ == '__main__':
     cs = CilinSimilarity()
-    print(cs.return_tongyici('稳定'))
-    print(cs.return_tongyici2('产生'))
+    #print(cs.return_tongyici('稳定'))
+    print(cs.return_tongyici2('热能'))
     '''
     cs = CilinSimilarity()
     tongyici = cs.find_tongyici('物体')#利用词林找到同义词
